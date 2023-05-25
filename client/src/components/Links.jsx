@@ -18,6 +18,7 @@ class Links extends Component {
     render() {
         return (
             <React.Fragment>
+                <img src="https://thumbs.gfycat.com/SatisfiedSpicyHorse-size_restricted.gif" width={100} alt="Logo" />
                 <Link to="/" className="navbar-brand">
                     Simple MERN Application
                 </Link>
@@ -35,6 +36,9 @@ class Links extends Component {
                         </Item>
                     </List>
                 </Collapse>
+                <img src="https://i.gifer.com/WG8R.gif" width={100} alt="Logo" />
+                <img src="https://images.gamebanana.com/img/ico/sprays/59872c18eb994.gif" width={100} alt="Logo" />
+                <img src="https://media.tenor.com/LwfpUq5ZagUAAAAj/spin-it-dancing.gif" width={100} alt="Logo" />
             </React.Fragment>
         )
     }
