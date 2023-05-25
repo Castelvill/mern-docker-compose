@@ -1,6 +1,8 @@
 # MERN Docker Compose Demo
 
-This MERN project is based on repo: https://github.com/sidpalas/mern-docker-compose 
+This MERN project is based on: https://github.com/sidpalas/mern-docker-compose 
+
+The main goal of this project is to create an easy web app for uploading, storing and displaying images and their descriptions.
 
 ---
 
