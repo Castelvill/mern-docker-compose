@@ -6,7 +6,7 @@ The main goal of this project is to create an easy web app for uploading, storin
 
 ---
 
-Run `make build` from root to build containers<br/>
+Run `make build` from root to build containers<br/><br/>
 Run `make run` from root to run containers with docker-compose
 
 ---
