@@ -1,4 +1,4 @@
-# MERN Docker Compose Demo
+# MERN Docker Compose
 
 This MERN project is based on: https://github.com/sidpalas/mern-docker-compose 
 
