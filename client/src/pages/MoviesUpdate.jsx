@@ -44,6 +44,7 @@ class MoviesUpdate extends Component {
             name: '',
             rating: '',
             time: '',
+            image: '',
         }
     }
 
@@ -65,10 +66,17 @@ class MoviesUpdate extends Component {
         this.setState({ time })
     }
 
+    handleChangeInputImage = async event => {
+        const file = event.target.files[0];
+        const image = await convertToBase64(file);
+        console.log(image)
+        this.setState({ image })
+    }
+
     handleUpdateMovie = async () => {
-        const { id, name, rating, time } = this.state
+        const { id, name, rating, time, image } = this.state
         const arrayTime = time.split('/')
-        const payload = { name, rating, time: arrayTime }
+        const payload = { name, rating, time: arrayTime, image }
 
         await api.updateMovieById(id, payload).then(res => {
             window.alert(`Movie updated successfully`)
@@ -76,6 +84,7 @@ class MoviesUpdate extends Component {
                 name: '',
                 rating: '',
                 time: '',
+                image: '',
             })
         })
     }
@@ -88,11 +97,12 @@ class MoviesUpdate extends Component {
             name: movie.data.data.name,
             rating: movie.data.data.rating,
             time: movie.data.data.time.join('/'),
+            image: movie.data.data.image,
         })
     }
 
     render() {
-        const { name, rating, time } = this.state
+        const { name, rating, time, image } = this.state
         return (
             <Wrapper>
                 <Title>Create Movie</Title>
@@ -123,6 +133,18 @@ class MoviesUpdate extends Component {
                     onChange={this.handleChangeInputTime}
                 />
 
+                <Label>Image: </Label>
+                <input
+                    type="file"
+                    onChange={this.handleChangeInputImage}
+                    label="Image"
+                    name="myFile"
+                    id='file-upload'
+                    accept='.jpeg, .png, .jpg'
+                />
+                <br></br>
+                <img src={image} width={150}/>
+
                 <Button onClick={this.handleUpdateMovie}>Update Movie</Button>
                 <CancelButton href={'/movies/list'}>Cancel</CancelButton>
             </Wrapper>
@@ -131,3 +153,16 @@ class MoviesUpdate extends Component {
 }
 
 export default MoviesUpdate
+
+function convertToBase64(file){
+    return new Promise((resolve, reject) => {
+        const fileReader = new FileReader()
+        fileReader.readAsDataURL(file)
+        fileReader.onload = () => {
+            resolve(fileReader.result)
+        };
+        fileReader.onerror = (error) => {
+            reject(error)
+        }
+    })
+}

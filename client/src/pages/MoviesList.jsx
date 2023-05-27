@@ -88,14 +88,9 @@ class MoviesList extends Component {
                 filterable: true,
             },
             {
-                Header: 'Rating',
-                accessor: 'rating',
-                filterable: true,
-            },
-            {
-                Header: 'Time',
-                accessor: 'time',
-                Cell: props => <span>{props.value.join(' / ')}</span>,
+                Header: 'Image',
+                accessor: 'image',
+                Cell: props => <img src={props.value} width={300}/>,
             },
             {
                 Header: '',

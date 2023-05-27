@@ -4,10 +4,10 @@ const Schema = mongoose.Schema
 const Movie = new Schema(
     {
         name: { type: String, required: true },
-        time: { type: [String], required: true },
-        rating: { type: Number, required: true },
+        image: { type: String }
     },
     { timestamps: true },
 )
 
 module.exports = mongoose.model('movies', Movie)
+//or: export default mongoose.models.movies || mongoose.model('movies', Movie)

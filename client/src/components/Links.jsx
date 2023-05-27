@@ -20,25 +20,25 @@ class Links extends Component {
             <React.Fragment>
                 <img src="https://thumbs.gfycat.com/SatisfiedSpicyHorse-size_restricted.gif" width={100} alt="Logo" />
                 <Link to="/" className="navbar-brand">
-                    Simple MERN Application
+                    GołeBaby.pl
                 </Link>
                 <Collapse>
                     <List>
                         <Item>
                             <Link to="/movies/list" className="nav-link">
-                                List Movies
+                                List Output
                             </Link>
                         </Item>
                         <Item>
                             <Link to="/movies/create" className="nav-link">
-                                Create Movie
+                                Create Output
                             </Link>
                         </Item>
                     </List>
                 </Collapse>
-                <img src="https://i.gifer.com/WG8R.gif" width={100} alt="Logo" />
-                <img src="https://images.gamebanana.com/img/ico/sprays/59872c18eb994.gif" width={100} alt="Logo" />
-                <img src="https://media.tenor.com/LwfpUq5ZagUAAAAj/spin-it-dancing.gif" width={100} alt="Logo" />
+                <img src="https://i.gifer.com/WG8R.gif" width={50} alt="Logo" />
+                <img src="https://images.gamebanana.com/img/ico/sprays/59872c18eb994.gif" width={50} alt="Logo" />
+                <img src="https://media.tenor.com/LwfpUq5ZagUAAAAj/spin-it-dancing.gif" width={50} alt="Logo" />
             </React.Fragment>
         )
     }
