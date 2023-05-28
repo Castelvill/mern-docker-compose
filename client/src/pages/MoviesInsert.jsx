@@ -53,7 +53,6 @@ class MoviesInsert extends Component {
     handleChangeInputImage = async event => {
         const file = event.target.files[0];
         const image = await convertToBase64(file);
-        console.log(image)
         this.setState({ image })
     }
 

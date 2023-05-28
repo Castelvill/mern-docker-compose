@@ -2,7 +2,8 @@ import axios from 'axios'
 
 const api = axios.create({
     //baseURL: 'http://192.168.56.103:5000/api', //in place of the address insert your machine's ip address
-    baseURL: 'http://localhost:5000/api'
+    //baseURL: 'http://localhost:5000/api'
+    baseURL: 'http://192.168.213.169:5000/api'
 })
 
 export const insertMovie = payload => api.post(`/movie`, payload)
