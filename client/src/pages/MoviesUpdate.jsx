@@ -41,14 +41,14 @@ class MoviesUpdate extends Component {
 
         this.state = {
             id: this.props.match.params.id,
-            name: '',
+            text: '',
             image: '',
         }
     }
 
-    handleChangeInputName = async event => {
-        const name = event.target.value
-        this.setState({ name })
+    handleChangeInputText = async event => {
+        const text = event.target.value
+        this.setState({ text })
     }
 
     handleChangeInputImage = async event => {
@@ -59,13 +59,13 @@ class MoviesUpdate extends Component {
     }
 
     handleUpdateMovie = async () => {
-        const { id, name, rating, image } = this.state
-        const payload = { name, image }
+        const { id, text, image } = this.state
+        const payload = { text, image }
 
         await api.updateMovieById(id, payload).then(res => {
             window.alert(`Movie updated successfully`)
             this.setState({
-                name: '',
+                text: '',
                 image: '',
             })
         })
@@ -76,22 +76,22 @@ class MoviesUpdate extends Component {
         const movie = await api.getMovieById(id)
 
         this.setState({
-            name: movie.data.data.name,
+            text: movie.data.data.text,
             image: movie.data.data.image,
         })
     }
 
     render() {
-        const { name, image } = this.state
+        const { text, image } = this.state
         return (
             <Wrapper>
                 <Title>Create Movie</Title>
 
-                <Label>Name: </Label>
+                <Label>text: </Label>
                 <InputText
                     type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
+                    value={text}
+                    onChange={this.handleChangeInputText}
                 />
 
                 <Label>Image: </Label>

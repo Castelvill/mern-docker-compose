@@ -8,8 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
     return (
-        <Router>
+        <Router >
             <NavBar />
+            
             <Switch>
                 <Route path="/movies/list" exact component={MoviesList} />
                 <Route path="/movies/create" exact component={MoviesInsert} />

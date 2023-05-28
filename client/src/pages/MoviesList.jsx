@@ -85,15 +85,19 @@ class MoviesList extends Component {
             {
                 Header: 'Image',
                 accessor: 'image',
-                Cell: props => <img src={props.value} width={300}/>,
+                width:400,
+                Cell: props => <img src={props.value} width={400}/>,
             },
             {
-                Header: 'Text',
-                accessor: 'name',
+                Header: 'Detected Text',
+                accessor: 'text',
+                style: { 'whiteSpace': 'unset'},
+                width:200,
                 filterable: true,
             },
             {
                 Header: '',
+                width:75,
                 accessor: '',
                 Cell: function(props) {
                     return (
@@ -106,6 +110,7 @@ class MoviesList extends Component {
             {
                 Header: '',
                 accessor: '',
+                width:75,
                 Cell: function(props) {
                     return (
                         <span>
@@ -131,6 +136,11 @@ class MoviesList extends Component {
                         defaultPageSize={10}
                         showPageSizeOptions={true}
                         minRows={0}
+                        getTdProps={() => ({
+                            style: {
+                              height: '400px',
+                            },
+                        })}
                     />
                 )}
             </Wrapper>

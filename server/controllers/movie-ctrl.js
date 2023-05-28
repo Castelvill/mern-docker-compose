@@ -50,7 +50,7 @@ updateMovie = async (req, res) => {
                 message: 'Movie not found!',
             })
         }
-        movie.name = body.name
+        movie.text = body.text
         movie.image = body.image
         movie
             .save()

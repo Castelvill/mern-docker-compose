@@ -40,14 +40,14 @@ class MoviesInsert extends Component {
         super(props)
 
         this.state = {
-            name: '',
+            text: '',
             image: '',
         }
     }
 
-    handleChangeInputName = async event => {
-        const name = event.target.value
-        this.setState({ name })
+    handleChangeInputText = async event => {
+        const text = event.target.value
+        this.setState({ text })
     }
 
     handleChangeInputImage = async event => {
@@ -57,20 +57,20 @@ class MoviesInsert extends Component {
     }
 
     handleIncludeMovie = async () => {
-        const { name, image } = this.state
-        const payload = { name, image }
+        const { text, image } = this.state
+        const payload = { text, image }
 
         await api.insertMovie(payload).then(res => {
             window.alert(`Movie inserted successfully`)
             this.setState({
-                name: '',
+                text: '',
                 image: ''
             })
         })
     }
 
     render() {
-        const { name, image } = this.state
+        const { text, image } = this.state
         return (
             <Wrapper>
                 <Title>Create Output</Title>
@@ -78,8 +78,8 @@ class MoviesInsert extends Component {
                 <Label>Text: </Label>
                 <InputText
                     type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
+                    value={text}
+                    onChange={this.handleChangeInputText}
                 />
                 
                 <Label>Image: </Label>
