@@ -51,8 +51,6 @@ updateMovie = async (req, res) => {
             })
         }
         movie.name = body.name
-        movie.time = body.time
-        movie.rating = body.rating
         movie.image = body.image
         movie
             .save()
@@ -72,8 +70,10 @@ updateMovie = async (req, res) => {
     })
 }
 
+
+
 deleteMovie = async (req, res) => {
-    await Movie.findOneAndDelete({ _id: req.params.id }, (err, movie) => {
+    await Movie.findOneAndRemove({ _id: req.params.id }, (err, movie) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }

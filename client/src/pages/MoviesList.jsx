@@ -77,20 +77,20 @@ class MoviesList extends Component {
         console.log('TCL: MoviesList -> render -> movies', movies)
 
         const columns = [
-            {
+            /*{
                 Header: 'ID',
                 accessor: '_id',
                 filterable: true,
-            },
-            {
-                Header: 'Name',
-                accessor: 'name',
-                filterable: true,
-            },
+            },*/
             {
                 Header: 'Image',
                 accessor: 'image',
                 Cell: props => <img src={props.value} width={300}/>,
+            },
+            {
+                Header: 'Text',
+                accessor: 'name',
+                filterable: true,
             },
             {
                 Header: '',
