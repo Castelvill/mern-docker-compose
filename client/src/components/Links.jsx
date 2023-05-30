@@ -19,18 +19,18 @@ class Links extends Component {
         return (
             <React.Fragment>
                 <Link to="/" className="navbar-brand" style={{ fontSize: 40, marginRight: 20}}>
-                    OCR+MERN
+                    OCR
                 </Link>
                 <Collapse>
                     <List>
                         <Item>
                             <Link to="/movies/list" className="nav-link" style={{ fontSize: 30, marginRight: 20 }}>
-                                List Results
+                                Results
                             </Link>
                         </Item>
                         <Item>
                             <Link to="/movies/create" className="nav-link" style={{ fontSize: 30 }}>
-                                Create Result
+                                Upload
                             </Link>
                         </Item>
                     </List>
