@@ -28,7 +28,7 @@ class UpdateMovie extends Component {
     }
 
     render() {
-        return <Update onClick={this.updateUser}>Update</Update>
+        return <Update onClick={this.updateUser} style={{ fontSize: 30}}>Update</Update>
     }
 }
 
@@ -47,7 +47,7 @@ class DeleteMovie extends Component {
     }
 
     render() {
-        return <Delete onClick={this.deleteUser}>Delete</Delete>
+        return <Delete onClick={this.deleteUser} style={{ fontSize: 30}}>Delete</Delete>
     }
 }
 
@@ -91,13 +91,13 @@ class MoviesList extends Component {
             {
                 Header: 'Detected Text',
                 accessor: 'text',
-                style: { 'whiteSpace': 'unset'},
-                width:200,
+                style: { 'whiteSpace': 'unset', 'fontSize': 30},
+                width:300,
                 filterable: true,
             },
             {
                 Header: '',
-                width:75,
+                width:150,
                 accessor: '',
                 Cell: function(props) {
                     return (
@@ -110,7 +110,7 @@ class MoviesList extends Component {
             {
                 Header: '',
                 accessor: '',
-                width:75,
+                width:150,
                 Cell: function(props) {
                     return (
                         <span>
