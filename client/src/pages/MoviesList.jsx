@@ -28,7 +28,7 @@ class UpdateMovie extends Component {
     }
 
     render() {
-        return <Update onClick={this.updateUser}><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" width={50} alt="Bin" /></Update>
+        return <Update onClick={this.updateUser} style={{ fontSize: 30}}>Update</Update>
     }
 }
 
@@ -47,7 +47,7 @@ class DeleteMovie extends Component {
     }
 
     render() {
-        return <Delete onClick={this.deleteUser}><img src="https://images.freeimages.com/fic/images/icons/1580/devine_icons_part_2/512/trash_recyclebin_empty_closed.png" width={50} alt="Bin" /></Delete>
+        return <Delete onClick={this.deleteUser} style={{ fontSize: 30}}>Delete</Delete>
     }
 }
 
@@ -97,7 +97,7 @@ class MoviesList extends Component {
             },
             {
                 Header: '',
-                width:70,
+                width:150,
                 accessor: '',
                 Cell: function(props) {
                     return (
@@ -110,7 +110,7 @@ class MoviesList extends Component {
             {
                 Header: '',
                 accessor: '',
-                width:70,
+                width:150,
                 Cell: function(props) {
                     return (
                         <span>
